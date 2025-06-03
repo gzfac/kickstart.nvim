@@ -108,7 +108,7 @@ vim.o.number = true
 vim.o.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
-vim.o.showmode = false
+vim.o.showmode = true
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -120,6 +120,7 @@ end)
 
 -- Enable break indent
 vim.o.breakindent = true
+-- asjdg j sd jfj fja fjs jfjdafj sjdf jsdjfjjdfj jdfdjf jdsfjds jfjdafj da jfdf jakj fjdfjjdfj jsdfjdjj dfjasfjdkafjajfdaf
 
 -- Save undo history
 vim.o.undofile = true
@@ -127,7 +128,6 @@ vim.o.undofile = true
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
-
 -- Keep signcolumn on by default
 vim.o.signcolumn = 'yes'
 
@@ -138,8 +138,9 @@ vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 
 -- Configure how new splits should be opened
-vim.o.splitright = true
-vim.o.splitbelow = true
+vim.o.splitright = false
+vim.o.splitbelow = false
+vim.o.eadirection = 'ver'
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
