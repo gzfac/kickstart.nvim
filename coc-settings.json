@@ -1,0 +1,5 @@
+{
+  "clangd.arguments": ["--background-index", "--clang-tidy"],
+  "clangd.fallbackFlags": ["-std=c++23"],
+	"clangd.trace.server": "verbose"
+}
