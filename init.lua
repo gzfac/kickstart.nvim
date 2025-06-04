@@ -5,7 +5,7 @@
 =====================================================================
 ========                                    .-----.          ========
 ========         .----------------------.   | === |          ========
-========         |.-""""""""""""""""""-.|   |-----|          ========
+5.2========         |.-""""""""""""""""""-.|   |-----|          ========
 ========         ||                    ||   | === |          ========
 ========         ||   KICKSTART.NVIM   ||   |-----|          ========
 ========         ||                    ||   | === |          ========
@@ -253,9 +253,9 @@ require('lazy').setup({
     config = function()
       -- This is the default configuration
       require('guess-indent').setup {
-        auto_cmd = true, -- Set to false to disable automatic execution
+        auto_cmd = true,               -- Set to false to disable automatic execution
         override_editorconfig = false, -- Set to true to override settings set by .editorconfig
-        filetype_exclude = { -- A list of filetypes for which the auto command gets disabled
+        filetype_exclude = {           -- A list of filetypes for which the auto command gets disabled
           'netrw',
           'tutor',
         },
@@ -268,7 +268,7 @@ require('lazy').setup({
         on_tab_options = { -- A table of vim options when tabs are detected
           ['expandtab'] = false,
         },
-        on_space_options = { -- A table of vim options when spaces are detected
+        on_space_options = {        -- A table of vim options when spaces are detected
           ['expandtab'] = true,
           ['tabstop'] = 'detected', -- If the option value is 'detected', The value is set to the automatically detected indent size.
           ['softtabstop'] = 'detected',
@@ -327,7 +327,7 @@ require('lazy').setup({
   -- Then, because we use the `opts` key (recommended), the configuration runs
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
-  { -- Useful plugin to show you pending keybinds.
+  {                     -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
@@ -408,7 +408,7 @@ require('lazy').setup({
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
-      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -511,11 +511,14 @@ require('lazy').setup({
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.
       -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-      { 'mason-org/mason.nvim', opts = {
-        ensure_installed = {
-          'clangd',
-        },
-      } },
+      {
+        'mason-org/mason.nvim',
+        opts = {
+          ensure_installed = {
+            'clangd',
+          },
+        }
+      },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -1035,7 +1038,7 @@ require('lazy').setup({
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!

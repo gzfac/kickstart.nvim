@@ -8,4 +8,8 @@ return {
     'neoclide/coc.nvim',
     branch = 'release',
   },
+  {
+    'thePrimeagen/vim-be-good',
+    cmd = 'VimBeGood',
+  },
 }
